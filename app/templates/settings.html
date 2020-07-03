@@ -6,7 +6,7 @@
     {{ form.hidden_tag() }}
     <div class="mb-3">
         {{ form.letters_number.label(class='form-label') }}
-        {{ form.letters_number(class='form-control') }}
+        {{ form.letters_number(class='form-range', min='1', max='32') }}
     </div>
     {% for error in form.letters_number.errors %}
         <div class="alert alert-danger mb-3" role="alert">
@@ -15,7 +15,7 @@
     {% endfor %}
     <div class="mb-3">
         {{ form.passwords_number.label(class='form-label') }}
-        {{ form.passwords_number(class='form-control') }}
+        {{ form.passwords_number(class='form-range', min='1', max='20') }}
     </div>
     {% for error in form.passwords_number.errors %}
         <div class="alert alert-danger mb-3" role="alert">
